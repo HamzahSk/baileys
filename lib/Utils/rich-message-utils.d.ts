@@ -6,32 +6,9 @@ export function toUnified(submessages: any): {
     response_id: any;
     sections: any;
 };
-export function buildAdditionalBotMetadataContext(submessages: any): {
-    sources: {
-        provider: number;
-        thumbnailCdnUrl: any;
-        sourceProviderUrl: any;
-        sourceQuery: string;
-        faviconCdnUrl: string;
-        citationNumber: number;
-        sourceTitle: any;
-    }[];
-    mediaDetailsMetadataList: {
-        id: any;
-        previewMedia: {
-            fileSha256: string;
-            mediaKey: string;
-            fileEncSha256: string;
-            directPath: string;
-            mediaKeyTimestamp: number;
-            mimetype: string;
-        };
-    }[];
-};
 export function prepareRichResponseMessage(content: any): {
     messageContextInfo: {
         botMetadata: {
-            pluginMetadata: {};
             verificationMetadata: {
                 proofs: {
                     certificateChain: Uint8Array<ArrayBuffer>[];
@@ -39,10 +16,6 @@ export function prepareRichResponseMessage(content: any): {
                     useCase: number;
                     signature: Uint8Array<ArrayBuffer>;
                 }[];
-            };
-            botRenderingConfigMetadata: {
-                bloksVersioningId: string;
-                pixelDensity: number;
             };
         };
     };
@@ -57,7 +30,6 @@ export function botMetadataCertificate(length?: number): Uint8Array<ArrayBuffer>
 export function wrapToBotForwardedMessage(richResponseMessage: any): {
     messageContextInfo: {
         botMetadata: {
-            pluginMetadata: {};
             verificationMetadata: {
                 proofs: {
                     certificateChain: Uint8Array<ArrayBuffer>[];
@@ -65,10 +37,6 @@ export function wrapToBotForwardedMessage(richResponseMessage: any): {
                     useCase: number;
                     signature: Uint8Array<ArrayBuffer>;
                 }[];
-            };
-            botRenderingConfigMetadata: {
-                bloksVersioningId: string;
-                pixelDensity: number;
             };
         };
     };

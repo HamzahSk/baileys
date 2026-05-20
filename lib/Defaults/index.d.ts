@@ -132,10 +132,6 @@ export namespace TimeMs {
     let Day: number;
     let Week: number;
 }
-export namespace BOT_RENDERING_CONFIG_METADATA {
-    let bloksVersioningId: string;
-    let pixelDensity: number;
-}
 import { proto } from '../../WAProto/index.js';
 declare const version: number[];
 import { makeLibSignalRepository } from '../Signal/libsignal.js';

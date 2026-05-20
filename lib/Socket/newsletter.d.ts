@@ -149,8 +149,8 @@ export function makeNewsletterSocket(config: any): {
     groupJoinApprovalMode: (jid: any, mode: any) => Promise<void>;
     groupFetchAllParticipating: () => Promise<{}>;
     findUserId: (pnLid: any) => Promise<{
-        phoneNumber: any;
-        lid: any;
+        lid: undefined;
+        phoneNumber: undefined;
     }>;
     serverProps: {
         privacyTokenOn1to1: boolean;

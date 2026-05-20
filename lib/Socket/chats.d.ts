@@ -1,7 +1,7 @@
 export function makeChatsSocket(config: any): {
     findUserId: (pnLid: any) => Promise<{
-        phoneNumber: any;
-        lid: any;
+        lid: undefined;
+        phoneNumber: undefined;
     }>;
     serverProps: {
         /** AB prop 10518: gate tctoken on 1:1 messages. Default true (safe: avoids 463). */
